@@ -22,6 +22,7 @@
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
+      <DestinationDirectory Value="C:\Users\Jorge!\Documents\GitHub\lazarus-draw-shapes"/>
     </PublishOptions>
     <RunParams>
       <local>

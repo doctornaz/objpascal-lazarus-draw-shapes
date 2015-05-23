@@ -11322,4 +11322,14 @@ object Main: TMain
     }
     Transparent = True
   end
+  object Pintar: TButton
+    Left = 8
+    Height = 25
+    Top = 40
+    Width = 75
+    Caption = 'Pintar'
+    Enabled = False
+    OnClick = PintarClick
+    TabOrder = 2
+  end
 end
