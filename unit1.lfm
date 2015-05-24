@@ -3,10 +3,10 @@ object Main: TMain
   Height = 476
   Top = 142
   Width = 593
-  Caption = 'Circulo de Invocacion'
-  ClientHeight = 476
+  Caption = 'Figuras'
+  ClientHeight = 456
   ClientWidth = 593
-  Color = clBackground
+  Color = clMenu
   Icon.Data = {
     8E7105000000010007002020000001000800A808000076000000101000000100
     0800680500001E090000000000000100200028200400860E0000808000000100
@@ -11158,34 +11158,14 @@ object Main: TMain
     0000000000000000000000000000000000000000000000000000000000000000
     00008001000080010000C0030000F00F0000
   }
+  Menu = Principal
   LCLVersion = '1.2.0.3'
-  object Pentagrama: TButton
-    Left = 8
-    Height = 25
-    Top = 8
-    Width = 75
-    Caption = 'Invocar'
-    Color = clMaroon
-    OnClick = PentagramaClick
-    TabOrder = 0
-  end
-  object Salir: TButton
-    Left = 88
-    Height = 25
-    Top = 8
-    Width = 75
-    Caption = 'Salir'
-    Color = clMaroon
-    OnClick = SalirClick
-    TabOrder = 1
-  end
-  object Skeleton: TImage
+  object Esqueleto: TImage
     Left = 0
-    Height = 476
+    Height = 456
     Top = 0
     Width = 593
     Align = alClient
-    AutoSize = True
     Center = True
     Picture.Data = {
       0954474946496D61676549100000474946383961D100BE00F400000000003202
@@ -11321,15 +11301,40 @@ object Main: TMain
       BBC01BBCC23BBCC45BBCC67BBCC89BBCCABBBC91120200
     }
     Transparent = True
+    Visible = False
   end
-  object Pintar: TButton
-    Left = 8
-    Height = 25
-    Top = 40
-    Width = 75
-    Caption = 'Pintar'
-    Enabled = False
-    OnClick = PintarClick
-    TabOrder = 2
+  object Principal: TMainMenu
+    left = 560
+    top = 424
+    object Pentagrama: TMenuItem
+      Caption = 'Pentagrama'
+      object penta_Dibujar: TMenuItem
+        Caption = 'Dibujar'
+        OnClick = penta_DibujarClick
+      end
+      object penta_Pintar: TMenuItem
+        Caption = 'Pintar'
+        Enabled = False
+        OnClick = penta_PintarClick
+      end
+    end
+    object Pollo: TMenuItem
+      Caption = 'Pollazo'
+      object pollo_Dibujar: TMenuItem
+        Caption = 'Dibujar'
+        OnClick = pollo_DibujarClick
+      end
+    end
+    object Copa: TMenuItem
+      Caption = 'Copa'
+      object copa_Dibujar: TMenuItem
+        Caption = 'Dibujar'
+        OnClick = copa_DibujarClick
+      end
+    end
+    object Salir: TMenuItem
+      Caption = 'Salir'
+      OnClick = SalirClick
+    end
   end
 end
